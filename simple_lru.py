@@ -3,6 +3,10 @@ from collections import OrderedDict
 
 class LRUCache:
     def __init__(self, max_capacity=1):
+        if max_capacity == 0:
+            raise ValueError(
+                'Cannot instantiate LRUCache with 0 capacity'
+                )
         self.cache = OrderedDict()
         self.capacity = max_capacity
 
