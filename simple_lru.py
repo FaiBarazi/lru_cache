@@ -25,3 +25,6 @@ class LRUCache:
 
     def reset(self):
         self.cache = OrderedDict()
+
+    def __len__(self):
+        return len(self.cache)
